@@ -1,0 +1,17 @@
+tls:
+  enabled: false
+  crt: server.crt
+  key: server.key
+
+basicAuth:
+  enabled: false
+  username: admin
+  password: admin
+
+bearerAuth:
+  enabled: false
+  signingKey: my_secret_key
+
+scripts:
+  - name: speedtest
+    script: /usr/local/bin/speedtest-exporter.sh
