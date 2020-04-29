@@ -27,7 +27,7 @@ then
 
   # Defaults
   DOCKERFILE="${DOCKERFILE:-Dockerfile}"
-  IMAGE_NAME="${IMAGE_NAME:-billimek/speedtest}"
+  IMAGE_NAME="${IMAGE_NAME:-billimek/prometheus-speedtest-exporter}"
   TAG="${TAG:-latest}"
 
   case "$1" in
