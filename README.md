@@ -2,6 +2,8 @@
 
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/billimek/prometheus-speedtest-exporter)](https://hub.docker.com/r/billimek/prometheus-speedtest-exporter/tags)
 
+![](https://i.imgur.com/iIzWUre.png)
+
 This is a docker container which runs a prometheus exporter to collect speedtest data using the official [Speedtest CLI](https://www.speedtest.net/apps/cli) and [script_exporter](https://github.com/ricoberger/script_exporter).  The [billimek/prometheus-speedtest-exporter](https://hub.docker.com/repository/docker/billimek/prometheus-speedtest-exporter) docker image is multi-arch supporting amd64, arm7, and arm64.
 
 ## Prometheus configuration
@@ -32,7 +34,11 @@ scrape_configs:
 
 If running in kubernetes, there is a helm chart leveraging this with a built-in `ServiceMonitor` for an autoconfigured solution: https://github.com/billimek/billimek-charts/tree/master/charts/speedtest-prometheus
 
-Inspired by:
+## Grafana Dashboard
+
+Included is an [example grafana dashboard](speedtest-exporter.json) as shown in the screenshot above.
+
+## Inspired by
 
 * https://github.com/h2xtreme/prometheus-speedtest-exporter
 * https://github.com/ricoberger/script_exporter
