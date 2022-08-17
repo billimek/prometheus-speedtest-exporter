@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV SPEEDTEST_VERSION=1.0.0
+ENV SPEEDTEST_VERSION=1.2.0
 ENV SCRIPT_EXPORTER_VERSION=v2.1.2
 
 RUN apk add tar curl ca-certificates bash
@@ -12,9 +12,9 @@ RUN ARCH=$(apk info --print-arch) && \
       armv7) _arch=armhf ;; \
       *) _arch="$ARCH" ;; \
     esac && \
-    echo https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-${SPEEDTEST_VERSION}-${_arch}-linux.tgz && \
+    echo https://install.speedtest.net/app/cli/ookla-speedtest-${SPEEDTEST_VERSION}-linux-${_arch}.tgz && \
     curl -fsSL -o /tmp/ookla-speedtest.tgz \
-      https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-${SPEEDTEST_VERSION}-${_arch}-linux.tgz && \
+      https://install.speedtest.net/app/cli/ookla-speedtest-${SPEEDTEST_VERSION}-linux-${_arch}.tgz && \
     tar xvfz /tmp/ookla-speedtest.tgz -C /usr/local/bin speedtest && \
     rm -rf /tmp/ookla-speedtest.tgz
 
