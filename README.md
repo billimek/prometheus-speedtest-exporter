@@ -4,7 +4,7 @@
 
 ![](https://i.imgur.com/iIzWUre.png)
 
-This is a docker container which runs a prometheus exporter to collect speedtest data using the official [Speedtest CLI](https://www.speedtest.net/apps/cli) and [script_exporter](https://github.com/ricoberger/script_exporter).  The [billimek/prometheus-speedtest-exporter](https://hub.docker.com/repository/docker/billimek/prometheus-speedtest-exporter) docker image is multi-arch supporting amd64, arm7, and arm64.
+This is a docker container which runs a prometheus exporter to collect speedtest data using the official [Speedtest CLI](https://www.speedtest.net/apps/cli) and [script_exporter](https://github.com/ricoberger/script_exporter).  The [billimek/prometheus-speedtest-exporter](https://hub.docker.com/repository/docker/billimek/prometheus-speedtest-exporter) docker image is multi-arch supporting amd64, arm6, arm7, and arm64.
 
 ## Testing the Exporter
 
@@ -17,7 +17,7 @@ sudo docker run --rm -p 9469:9469 billimek/prometheus-speedtest-exporter:latest
 Then invoke the `/probe` endpoint:
 
 ```bash
-curl http://localhost:9469/probe?script=speedtest
+curl "http://localhost:9469/probe?script=speedtest"
 ```
 
 After about 15 to 30 seconds or so you should see a result like this:
