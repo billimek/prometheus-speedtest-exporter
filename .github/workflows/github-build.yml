@@ -3,8 +3,15 @@ name: Release
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - '**'
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    branches:
+      - 'master'
   workflow_dispatch:
-    
 
 jobs:
   docker:
