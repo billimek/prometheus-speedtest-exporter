@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV SPEEDTEST_VERSION=1.2.0
-ENV SCRIPT_EXPORTER_VERSION=v2.1.2
+ENV SCRIPT_EXPORTER_VERSION=v2.5.2
 
 RUN apk add tar curl ca-certificates bash
 
